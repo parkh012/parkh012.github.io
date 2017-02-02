@@ -1,0 +1,32 @@
+body {
+	margin:0;
+	padding:0;
+}
+
+h1 {
+	font-family: "Avenir";
+	font-weight: lighter;
+	letter-spacing: 10px;
+	font-size: 60px;
+	text-align: center;
+	color: gray;
+	margin:0;
+}
+
+h2 {
+	font-family: "Avenir";
+	font-weight: lighter;
+	text-align: center;
+	color: gray;
+	margin:0 0 40px 0;
+}
+
+ul {
+	font-family: "Avenir";
+	font-size: 20px;
+	list-style: none;
+	text-align: center;
+	color: gray;
+	margin:0px;
+	padding: 0px;
+}
