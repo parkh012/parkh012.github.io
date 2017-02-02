@@ -1,4 +1,4 @@
-*{  }
+*{ vertical-align: top; }
 
 body {
 	font-family: Helvetica;
@@ -39,11 +39,6 @@ a:active { color: #ff0000; }
 /*LVHA - order that links must go in (:link,:visited, 
 :hover, :active)*/
 
-div {
-	background: #ff0;
-	vertical-align: top;
-}
-
 .c {
 	background: #ff0;
 	font-size: 16px;
@@ -52,12 +47,21 @@ div {
 	display: inline-block;
 }
 
-.c1 { width: 130px; }
+.parent { font-size: 0; line-height: 0; }
+
+.no-gutters { margin: 0px; }
+.no-left-gutter { margin-left: 0px; }
+.no-right-gutter { margin-right: 0px }
+
+.c1 { width: 130px; background: #fff; }
 .c2 { width: 290px; }
 .c3 { width: 450px }
 .c4 { width: 610px; }
 .c5 { width: 710px; }
 .c6 { width: 930px; }
 	
-
+img {
+	width: 100%;
+	height: auto;
+}
 
