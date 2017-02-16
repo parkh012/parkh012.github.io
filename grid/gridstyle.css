@@ -1,0 +1,67 @@
+*{ vertical-align: top; }
+
+body {
+	font-family: Helvetica;
+	font-size: 0px;
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	width: 960px;
+	background: #ccc;
+	margin: 0 auto;
+	/* if top/bottom, and left/right are the same, 
+	collapse them as __px __px instead of 4 of those*/
+	/* 0 auto centers it on page*/
+
+}
+
+h1, h2 {
+	font-size: 16px;
+	margin: 0px;
+	font-weight: normal;
+}
+
+a:link {
+	color: #000000;
+	/*black - #000000*/
+	/*white - #ffffff*/
+	/*RR GG BB
+	ex. red - ff 00 00*/
+	text-decoration: none;
+}
+
+a:visited { color: #00f; }
+a:hover { color: #ffff00; }
+a:active { color: #ff0000; }
+
+/*LVHA - order that links must go in (:link,:visited, 
+:hover, :active)*/
+
+.c {
+	background: #ff0;
+	font-size: 16px;
+	line-height: 20px;
+	margin: 0 15px 30px 15px;
+	display: inline-block;
+}
+
+.parent { font-size: 0; line-height: 0; }
+
+.no-gutters { margin: 0px; }
+.no-left-gutter { margin-left: 0px; }
+.no-right-gutter { margin-right: 0px }
+
+.c1 { width: 130px; background: #fff; }
+.c2 { width: 290px; }
+.c3 { width: 450px }
+.c4 { width: 610px; }
+.c5 { width: 710px; }
+.c6 { width: 930px; }
+	
+img {
+	width: 100%;
+	height: auto;
+}
+
