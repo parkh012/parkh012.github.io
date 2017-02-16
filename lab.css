@@ -1,0 +1,46 @@
+*{ vertical-align: top; }
+
+body {
+	font-family: "Avenir";
+	font-weight: bold;
+	color: white;
+	margin: 0; 
+	padding: 0;
+	background: #254477;
+}
+
+.wrapper {
+	width: 100%;
+	margin: 0 auto;
+
+}
+
+.header {
+	width: 200px;
+	text-align: center;	
+	letter-spacing: 2px;
+	border-style: solid;
+	border-color: white;
+	border-width: 10px;
+	margin: 0 auto;
+	margin-top: 10%;
+}
+
+h1 {
+	font-size: 70px;
+	margin: 0;
+}
+
+.links {
+	font-size: 50px;
+
+}
+
+a:link {
+	color: white;
+	text-decoration: none;
+}
+
+a:visited { color: white; }
+a:hover { color: #ffb2b7; }
+a:active { color: #ffb2b7; }
