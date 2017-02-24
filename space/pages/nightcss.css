@@ -32,8 +32,8 @@ a:active { color: #009933; }
 	padding: 30px;
 }
 
-.current a:link {
-	color: #009933;
+.current {
+	color: #009933 !important;
 }
 
 
