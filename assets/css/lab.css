@@ -16,7 +16,7 @@ body {
 }
 
 .header {
-	width: 600px;
+	width: 300px;
 	text-align: center;	
 	letter-spacing: 2px;
 	border-style: solid;
@@ -38,11 +38,10 @@ h2 {
 
 .pages {
 	width: 600px;
-	font-size: 40px;
-	margin-left: 24%;
-	display: inline-block;
+	font-size: 30px;
+	text-align: center;
+	margin: 0 auto;
 	line-height: 10px;
-
 }
 
 a:link {

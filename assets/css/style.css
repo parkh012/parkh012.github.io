@@ -40,7 +40,19 @@ h2 {
 	width: 600px;
 	font-size: 40px;
 	display: inline-block;
+	height: 100px
+}
 
+.lab-text {
+	height: 100px;
+	width: 300px;
+	text-align: left;
+}
+
+.studio-text {
+	height: 100px;
+	width: 300px;
+	text-align: right;
 }
 
 a:link {

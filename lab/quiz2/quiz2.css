@@ -1,0 +1,146 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.composition {
+	width: 768px;
+	height: 600px;
+	position: relative;
+	background: #41443d;
+	margin: 0 auto;
+}
+
+.circle {
+	background: #d8d8d8;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.beige {
+	height: 400px;
+	width: 256px;
+	background: #b0ab97;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+}
+
+.darkgrey {
+	height: 200px;
+	width: 512px;
+	background: #495056;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.black {
+	height: 400px;
+	width: 256px;
+	background: #202c28;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.grey {
+	height: 200px;
+	width: 512px;
+	background: #b6b7b1;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.I-rect1 {
+	height: 300px;
+	width: 156px;
+	background: #212c28;
+	position: absolute;
+	margin: 50px;
+}
+
+.lightgreyrect {
+	height: 280px;
+	width: 72px;
+	background: #cfd0cb;
+	display: inline-block;
+	position: absolute;
+	margin: 10px 10px 10px 0;
+}
+
+.one {left: 0;} .two {left: 84px;}
+
+.longrect1 {
+	background: #202c28;
+	height: 100px;
+	width: 412px;
+	margin: 50px;
+	position: absolute;
+}
+
+.thinrect {
+	width: 392px;
+	height: 8px;
+	margin: 0 10px 0 10px;
+	background: #cfd0cb;
+	position: absolute;
+}
+
+.r1 { top: 10px; } 
+.r2 { top: 28px; }
+.r3 { top: 46px; }
+.r4 { bottom: 28px; }
+.r5 { bottom: 10px; }
+
+.I-rect2 {
+	height: 300px;
+	width: 156px;
+	background: #cfd0cb; 
+	position: absolute;
+	margin: 50px;
+}
+
+.blackrect {
+	height: 280px;
+	width: 72px;
+	background: #202c28;
+	display: inline-block;
+	position: absolute;
+	margin: 10px 10px 10px 0;
+}
+
+.longrect2 {
+	background: #202c28;
+	height: 100px;
+	width: 412px;
+	margin: 50px;
+	position: absolute;
+}
+
+.greycolumn {
+	background: #495056;
+	display: inline-block;
+	margin: 10px 0 10px 0;
+	width: 57px;
+	height: 80px;
+	position: absolute;
+}
+
+.c1 {left: 10px;}
+.c2 {left: 77px;}
+.c3 {left: 144px;}
+.c4 {right: 144px;}
+.c5 {right: 77px;}
+.c6 {right: 10px;})
