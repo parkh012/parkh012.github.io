@@ -37,6 +37,8 @@
 
 .v5 { height: 95px; margin-bottom: 210px; }
 
+.v6 {height: 210px; margin bottom: 0; background-color: transparent; }
+
 .horizontalline {
   height: 20px;
   background-color: black;
@@ -49,6 +51,8 @@
 .hz2 { width: 110px; margin-right: 100px; }
 
 .hz3 { width: 45px; margin-right: 200px; }
+
+.hz4 { width: 150px; margin-right: 0px; background-color: transparent; }
 
 .horizontalcontainer {
   position: absolute;
