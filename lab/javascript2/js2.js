@@ -26,6 +26,6 @@ $('.nav-item').click(function() {
 $('.close').click(function() {
 
 	$('.slay').addClass('hide');
-	$('audio')[0].pause();
+	$('audio')[0].pause(); 
 });
 

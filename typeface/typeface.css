@@ -2,13 +2,34 @@
     display: none; 
 }
 
-.outerwrapper {
+.instructions {
+  width: 12%;
+  padding: 10px;
   position: fixed;
+  background: white;
+  z-index: 10;
+}
+
+body {
+  color: grey;
+  font-family: Helvetica;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+a:link {
+  color: grey;
+  text-decoration: none;
+}
+a:visited { color: grey; }
+a:hover { color: yellow; }
+a:active { color: grey; }
+
+.outerwrapper {
+  padding: 100px 0 0 0;
   width: 100%;
-  top:50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
   margin: 0 auto;
+  text-align: center;
 }
 
 .letterwrapper {
