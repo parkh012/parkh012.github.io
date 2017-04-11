@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Scroll and Spell</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <link href="typeface.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div class="instructions">
+	<u>Scroll and Spell: Receive Text or Make Your Own</u>
+	<div class="actions">
+		<div class="sayhello"><a href="#">Say Hello</a></div>
+		<div class="fortune"><a href="#">Answer A Question</a></div>
+		<div class="scramble"><a href="#">Scramble</a></div>
+		<div class="clear"><a href="#">Clear</a></div>
+	</div>
+</div>
+
+<div class="outerwrapper">
+
+	<div class="letterwrapper letter-1">
+
+		<div class="horizontalcontainer r1">
+			<div class="horizontalline hz1 r1"></div>
+			<div class="horizontalline hz2 r1"></div>
+			<div class="horizontalline hz3 r1"></div>
+			<div class="horizontalline hz4 r1"></div>
+		</div>
+
+		<div class="horizontalcontainer r2">
+			<div class="horizontalline hz1 r2"></div>
+			<div class="horizontalline hz2 r2"></div>
+			<div class="horizontalline hz3 r2"></div>
+			<div class="horizontalline hz4 r2"></div>
+		</div>
+
+		<div class="horizontalcontainer r3">
+			<div class="horizontalline hz1 r3"></div>
+			<div class="horizontalline hz2 r3"></div>
+			<div class="horizontalline hz3 r3"></div>
+			<div class="horizontalline hz4 r3"></div>
+		</div>
+
+		<div class="verticalcontainer c1">
+			<div class="verticalline v1 c1"></div>
+			<div class="verticalline v2 c1"></div>
+			<div class="verticalline v3 c1"></div>
+			<div class="verticalline v4 c1"></div>
+			<div class="verticalline v5 c1"></div>
+			<div class="verticalline v6 c1"></div>
+		</div>
+
+		<div class="verticalcontainer c2">
+			<div class="verticalline v1 c2"></div>
+			<div class="verticalline v2 c2"></div>
+			<div class="verticalline v3 c2"></div>
+			<div class="verticalline v4 c2"></div>
+			<div class="verticalline v5 c2"></div>
+			<div class="verticalline v5 c2"></div>
+			<div class="verticalline v6 c2"></div>
+		</div>
+
+		<div class="verticalcontainer c3">
+			<div class="verticalline v1 c3"></div>
+			<div class="verticalline v2 c3"></div>
+			<div class="verticalline v3 c3"></div>
+			<div class="verticalline v4 c3"></div>
+			<div class="verticalline v5 c3"></div>
+			<div class="verticalline v6 c3"></div>
+		</div>
+
+	</div>
+
+	<div class="letterwrapper letter-2">
+
+		<div class="horizontalcontainer r1">
+			<div class="horizontalline hz1 r1"></div>
+			<div class="horizontalline hz2 r1"></div>
+			<div class="horizontalline hz3 r1"></div>
+			<div class="horizontalline hz4 r1"></div>
+		</div>
+
+		<div class="horizontalcontainer r2">
+			<div class="horizontalline hz1 r2"></div>
+			<div class="horizontalline hz2 r2"></div>
+			<div class="horizontalline hz3 r2"></div>
+			<div class="horizontalline hz4 r2"></div>
+		</div>
+
+		<div class="horizontalcontainer r3">
+			<div class="horizontalline hz1 r3"></div>
+			<div class="horizontalline hz2 r3"></div>
+			<div class="horizontalline hz3 r3"></div>
+			<div class="horizontalline hz4 r3"></div>
+		</div>
+
+		<div class="verticalcontainer c1">
+			<div class="verticalline v1 c1"></div>
+			<div class="verticalline v2 c1"></div>
+			<div class="verticalline v3 c1"></div>
+			<div class="verticalline v4 c1"></div>
+			<div class="verticalline v5 c1"></div>
+			<div class="verticalline v6 c1"></div>
+		</div>
+
+		<div class="verticalcontainer c2">
+			<div class="verticalline v1 c2"></div>
+			<div class="verticalline v2 c2"></div>
+			<div class="verticalline v3 c2"></div>
+			<div class="verticalline v4 c2"></div>
+			<div class="verticalline v5 c2"></div>
+			<div class="verticalline v5 c2"></div>
+			<div class="verticalline v6 c2"></div>
+		</div>
+
+		<div class="verticalcontainer c3">
+			<div class="verticalline v1 c3"></div>
+			<div class="verticalline v2 c3"></div>
+			<div class="verticalline v3 c3"></div>
+			<div class="verticalline v4 c3"></div>
+			<div class="verticalline v5 c3"></div>
+			<div class="verticalline v6 c3"></div>
+		</div>
+
+	</div>
+
+	<div class="letterwrapper letter-3">
+
+		<div class="horizontalcontainer r1">
+			<div class="horizontalline hz1 r1"></div>
+			<div class="horizontalline hz2 r1"></div>
+			<div class="horizontalline hz3 r1"></div>
+			<div class="horizontalline hz4 r1"></div>
+		</div>
+
+		<div class="horizontalcontainer r2">
+			<div class="horizontalline hz1 r2"></div>
+			<div class="horizontalline hz2 r2"></div>
+			<div class="horizontalline hz3 r2"></div>
+			<div class="horizontalline hz4 r2"></div>
+		</div>
+
+		<div class="horizontalcontainer r3">
+			<div class="horizontalline hz1 r3"></div>
+			<div class="horizontalline hz2 r3"></div>
+			<div class="horizontalline hz3 r3"></div>
+			<div class="horizontalline hz4 r3"></div>
+		</div>
+
+		<div class="verticalcontainer c1">
+			<div class="verticalline v1 c1"></div>
+			<div class="verticalline v2 c1"></div>
+			<div class="verticalline v3 c1"></div>
+			<div class="verticalline v4 c1"></div>
+			<div class="verticalline v5 c1"></div>
+			<div class="verticalline v6 c1"></div>
+		</div>
+
+		<div class="verticalcontainer c2">
+			<div class="verticalline v1 c2"></div>
+			<div class="verticalline v2 c2"></div>
+			<div class="verticalline v3 c2"></div>
+			<div class="verticalline v4 c2"></div>
+			<div class="verticalline v5 c2"></div>
+			<div class="verticalline v5 c2"></div>
+			<div class="verticalline v6 c2"></div>
+		</div>
+
+		<div class="verticalcontainer c3">
+			<div class="verticalline v1 c3"></div>
+			<div class="verticalline v2 c3"></div>
+			<div class="verticalline v3 c3"></div>
+			<div class="verticalline v4 c3"></div>
+			<div class="verticalline v5 c3"></div>
+			<div class="verticalline v6 c3"></div>
+		</div>
+
+	</div>
+<div class="letterwrapper letter-4">
+
+		<div class="horizontalcontainer r1">
+			<div class="horizontalline hz1 r1"></div>
+			<div class="horizontalline hz2 r1"></div>
+			<div class="horizontalline hz3 r1"></div>
+			<div class="horizontalline hz4 r1"></div>
+		</div>
+
+		<div class="horizontalcontainer r2">
+			<div class="horizontalline hz1 r2"></div>
+			<div class="horizontalline hz2 r2"></div>
+			<div class="horizontalline hz3 r2"></div>
+			<div class="horizontalline hz4 r2"></div>
+		</div>
+
+		<div class="horizontalcontainer r3">
+			<div class="horizontalline hz1 r3"></div>
+			<div class="horizontalline hz2 r3"></div>
+			<div class="horizontalline hz3 r3"></div>
+			<div class="horizontalline hz4 r3"></div>
+		</div>
+
+		<div class="verticalcontainer c1">
+			<div class="verticalline v1 c1"></div>
+			<div class="verticalline v2 c1"></div>
+			<div class="verticalline v3 c1"></div>
+			<div class="verticalline v4 c1"></div>
+			<div class="verticalline v5 c1"></div>
+			<div class="verticalline v6 c1"></div>
+		</div>
+
+		<div class="verticalcontainer c2">
+			<div class="verticalline v1 c2"></div>
+			<div class="verticalline v2 c2"></div>
+			<div class="verticalline v3 c2"></div>
+			<div class="verticalline v4 c2"></div>
+			<div class="verticalline v5 c2"></div>
+			<div class="verticalline v5 c2"></div>
+			<div class="verticalline v6 c2"></div>
+		</div>
+
+		<div class="verticalcontainer c3">
+			<div class="verticalline v1 c3"></div>
+			<div class="verticalline v2 c3"></div>
+			<div class="verticalline v3 c3"></div>
+			<div class="verticalline v4 c3"></div>
+			<div class="verticalline v5 c3"></div>
+			<div class="verticalline v6 c3"></div>
+		</div>
+
+	</div>
+	
+	<div class="letterwrapper letter-5">
+
+		<div class="horizontalcontainer r1">
+			<div class="horizontalline hz1 r1"></div>
+			<div class="horizontalline hz2 r1"></div>
+			<div class="horizontalline hz3 r1"></div>
+			<div class="horizontalline hz4 r1"></div>
+		</div>
+
+		<div class="horizontalcontainer r2">
+			<div class="horizontalline hz1 r2"></div>
+			<div class="horizontalline hz2 r2"></div>
+			<div class="horizontalline hz3 r2"></div>
+			<div class="horizontalline hz4 r2"></div>
+		</div>
+
+		<div class="horizontalcontainer r3">
+			<div class="horizontalline hz1 r3"></div>
+			<div class="horizontalline hz2 r3"></div>
+			<div class="horizontalline hz3 r3"></div>
+			<div class="horizontalline hz4 r3"></div>
+		</div>
+
+		<div class="verticalcontainer c1">
+			<div class="verticalline v1 c1"></div>
+			<div class="verticalline v2 c1"></div>
+			<div class="verticalline v3 c1"></div>
+			<div class="verticalline v4 c1"></div>
+			<div class="verticalline v5 c1"></div>
+			<div class="verticalline v6 c1"></div>
+		</div>
+
+		<div class="verticalcontainer c2">
+			<div class="verticalline v1 c2"></div>
+			<div class="verticalline v2 c2"></div>
+			<div class="verticalline v3 c2"></div>
+			<div class="verticalline v4 c2"></div>
+			<div class="verticalline v5 c2"></div>
+			<div class="verticalline v5 c2"></div>
+			<div class="verticalline v6 c2"></div>
+		</div>
+
+		<div class="verticalcontainer c3">
+			<div class="verticalline v1 c3"></div>
+			<div class="verticalline v2 c3"></div>
+			<div class="verticalline v3 c3"></div>
+			<div class="verticalline v4 c3"></div>
+			<div class="verticalline v5 c3"></div>
+			<div class="verticalline v6 c3"></div>
+		</div>
+
+	</div>
+
+		<div class="letterwrapper letter-6">
+
+		<div class="horizontalcontainer r1">
+			<div class="horizontalline hz1 r1"></div>
+			<div class="horizontalline hz2 r1"></div>
+			<div class="horizontalline hz3 r1"></div>
+			<div class="horizontalline hz4 r1"></div>
+		</div>
+
+		<div class="horizontalcontainer r2">
+			<div class="horizontalline hz1 r2"></div>
+			<div class="horizontalline hz2 r2"></div>
+			<div class="horizontalline hz3 r2"></div>
+			<div class="horizontalline hz4 r2"></div>
+		</div>
+
+		<div class="horizontalcontainer r3">
+			<div class="horizontalline hz1 r3"></div>
+			<div class="horizontalline hz2 r3"></div>
+			<div class="horizontalline hz3 r3"></div>
+			<div class="horizontalline hz4 r3"></div>
+		</div>
+
+		<div class="verticalcontainer c1">
+			<div class="verticalline v1 c1"></div>
+			<div class="verticalline v2 c1"></div>
+			<div class="verticalline v3 c1"></div>
+			<div class="verticalline v4 c1"></div>
+			<div class="verticalline v5 c1"></div>
+			<div class="verticalline v6 c1"></div>
+		</div>
+
+		<div class="verticalcontainer c2">
+			<div class="verticalline v1 c2"></div>
+			<div class="verticalline v2 c2"></div>
+			<div class="verticalline v3 c2"></div>
+			<div class="verticalline v4 c2"></div>
+			<div class="verticalline v5 c2"></div>
+			<div class="verticalline v5 c2"></div>
+			<div class="verticalline v6 c2"></div>
+		</div>
+
+		<div class="verticalcontainer c3">
+			<div class="verticalline v1 c3"></div>
+			<div class="verticalline v2 c3"></div>
+			<div class="verticalline v3 c3"></div>
+			<div class="verticalline v4 c3"></div>
+			<div class="verticalline v5 c3"></div>
+			<div class="verticalline v6 c3"></div>
+		</div>
+
+	</div>
+
+		<div class="letterwrapper letter-7">
+
+		<div class="horizontalcontainer r1">
+			<div class="horizontalline hz1 r1"></div>
+			<div class="horizontalline hz2 r1"></div>
+			<div class="horizontalline hz3 r1"></div>
+			<div class="horizontalline hz4 r1"></div>
+		</div>
+
+		<div class="horizontalcontainer r2">
+			<div class="horizontalline hz1 r2"></div>
+			<div class="horizontalline hz2 r2"></div>
+			<div class="horizontalline hz3 r2"></div>
+			<div class="horizontalline hz4 r2"></div>
+		</div>
+
+		<div class="horizontalcontainer r3">
+			<div class="horizontalline hz1 r3"></div>
+			<div class="horizontalline hz2 r3"></div>
+			<div class="horizontalline hz3 r3"></div>
+			<div class="horizontalline hz4 r3"></div>
+		</div>
+
+		<div class="verticalcontainer c1">
+			<div class="verticalline v1 c1"></div>
+			<div class="verticalline v2 c1"></div>
+			<div class="verticalline v3 c1"></div>
+			<div class="verticalline v4 c1"></div>
+			<div class="verticalline v5 c1"></div>
+			<div class="verticalline v6 c1"></div>
+		</div>
+
+		<div class="verticalcontainer c2">
+			<div class="verticalline v1 c2"></div>
+			<div class="verticalline v2 c2"></div>
+			<div class="verticalline v3 c2"></div>
+			<div class="verticalline v4 c2"></div>
+			<div class="verticalline v5 c2"></div>
+			<div class="verticalline v5 c2"></div>
+			<div class="verticalline v6 c2"></div>
+		</div>
+
+		<div class="verticalcontainer c3">
+			<div class="verticalline v1 c3"></div>
+			<div class="verticalline v2 c3"></div>
+			<div class="verticalline v3 c3"></div>
+			<div class="verticalline v4 c3"></div>
+			<div class="verticalline v5 c3"></div>
+			<div class="verticalline v6 c3"></div>
+		</div>
+
+	</div>
+
+	<div class="letterwrapper letter-8">
+
+		<div class="horizontalcontainer r1">
+			<div class="horizontalline hz1 r1"></div>
+			<div class="horizontalline hz2 r1"></div>
+			<div class="horizontalline hz3 r1"></div>
+			<div class="horizontalline hz4 r1"></div>
+		</div>
+
+		<div class="horizontalcontainer r2">
+			<div class="horizontalline hz1 r2"></div>
+			<div class="horizontalline hz2 r2"></div>
+			<div class="horizontalline hz3 r2"></div>
+			<div class="horizontalline hz4 r2"></div>
+		</div>
+
+		<div class="horizontalcontainer r3">
+			<div class="horizontalline hz1 r3"></div>
+			<div class="horizontalline hz2 r3"></div>
+			<div class="horizontalline hz3 r3"></div>
+			<div class="horizontalline hz4 r3"></div>
+		</div>
+
+		<div class="verticalcontainer c1">
+			<div class="verticalline v1 c1"></div>
+			<div class="verticalline v2 c1"></div>
+			<div class="verticalline v3 c1"></div>
+			<div class="verticalline v4 c1"></div>
+			<div class="verticalline v5 c1"></div>
+			<div class="verticalline v6 c1"></div>
+		</div>
+
+		<div class="verticalcontainer c2">
+			<div class="verticalline v1 c2"></div>
+			<div class="verticalline v2 c2"></div>
+			<div class="verticalline v3 c2"></div>
+			<div class="verticalline v4 c2"></div>
+			<div class="verticalline v5 c2"></div>
+			<div class="verticalline v5 c2"></div>
+			<div class="verticalline v6 c2"></div>
+		</div>
+
+		<div class="verticalcontainer c3">
+			<div class="verticalline v1 c3"></div>
+			<div class="verticalline v2 c3"></div>
+			<div class="verticalline v3 c3"></div>
+			<div class="verticalline v4 c3"></div>
+			<div class="verticalline v5 c3"></div>
+			<div class="verticalline v6 c3"></div>
+		</div>
+
+	</div>
+
+	<div class="letterwrapper letter-9">
+
+		<div class="horizontalcontainer r1">
+			<div class="horizontalline hz1 r1"></div>
+			<div class="horizontalline hz2 r1"></div>
+			<div class="horizontalline hz3 r1"></div>
+			<div class="horizontalline hz4 r1"></div>
+		</div>
+
+		<div class="horizontalcontainer r2">
+			<div class="horizontalline hz1 r2"></div>
+			<div class="horizontalline hz2 r2"></div>
+			<div class="horizontalline hz3 r2"></div>
+			<div class="horizontalline hz4 r2"></div>
+		</div>
+
+		<div class="horizontalcontainer r3">
+			<div class="horizontalline hz1 r3"></div>
+			<div class="horizontalline hz2 r3"></div>
+			<div class="horizontalline hz3 r3"></div>
+			<div class="horizontalline hz4 r3"></div>
+		</div>
+
+		<div class="verticalcontainer c1">
+			<div class="verticalline v1 c1"></div>
+			<div class="verticalline v2 c1"></div>
+			<div class="verticalline v3 c1"></div>
+			<div class="verticalline v4 c1"></div>
+			<div class="verticalline v5 c1"></div>
+			<div class="verticalline v6 c1"></div>
+		</div>
+
+		<div class="verticalcontainer c2">
+			<div class="verticalline v1 c2"></div>
+			<div class="verticalline v2 c2"></div>
+			<div class="verticalline v3 c2"></div>
+			<div class="verticalline v4 c2"></div>
+			<div class="verticalline v5 c2"></div>
+			<div class="verticalline v5 c2"></div>
+			<div class="verticalline v6 c2"></div>
+		</div>
+
+		<div class="verticalcontainer c3">
+			<div class="verticalline v1 c3"></div>
+			<div class="verticalline v2 c3"></div>
+			<div class="verticalline v3 c3"></div>
+			<div class="verticalline v4 c3"></div>
+			<div class="verticalline v5 c3"></div>
+			<div class="verticalline v6 c3"></div>
+		</div>
+
+	</div>	
+
+	<div class="letterwrapper letter-10">
+
+		<div class="horizontalcontainer r1">
+			<div class="horizontalline hz1 r1"></div>
+			<div class="horizontalline hz2 r1"></div>
+			<div class="horizontalline hz3 r1"></div>
+			<div class="horizontalline hz4 r1"></div>
+		</div>
+
+		<div class="horizontalcontainer r2">
+			<div class="horizontalline hz1 r2"></div>
+			<div class="horizontalline hz2 r2"></div>
+			<div class="horizontalline hz3 r2"></div>
+			<div class="horizontalline hz4 r2"></div>
+		</div>
+
+		<div class="horizontalcontainer r3">
+			<div class="horizontalline hz1 r3"></div>
+			<div class="horizontalline hz2 r3"></div>
+			<div class="horizontalline hz3 r3"></div>
+			<div class="horizontalline hz4 r3"></div>
+		</div>
+
+		<div class="verticalcontainer c1">
+			<div class="verticalline v1 c1"></div>
+			<div class="verticalline v2 c1"></div>
+			<div class="verticalline v3 c1"></div>
+			<div class="verticalline v4 c1"></div>
+			<div class="verticalline v5 c1"></div>
+			<div class="verticalline v6 c1"></div>
+		</div>
+
+		<div class="verticalcontainer c2">
+			<div class="verticalline v1 c2"></div>
+			<div class="verticalline v2 c2"></div>
+			<div class="verticalline v3 c2"></div>
+			<div class="verticalline v4 c2"></div>
+			<div class="verticalline v5 c2"></div>
+			<div class="verticalline v5 c2"></div>
+			<div class="verticalline v6 c2"></div>
+		</div>
+
+		<div class="verticalcontainer c3">
+			<div class="verticalline v1 c3"></div>
+			<div class="verticalline v2 c3"></div>
+			<div class="verticalline v3 c3"></div>
+			<div class="verticalline v4 c3"></div>
+			<div class="verticalline v5 c3"></div>
+			<div class="verticalline v6 c3"></div>
+		</div>
+
+	</div>
+
+
+</div>
+
+<script src="typeface.js"></script>
+
+
+</body>
+
+</html>

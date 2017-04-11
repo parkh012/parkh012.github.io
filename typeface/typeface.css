@@ -3,34 +3,55 @@
 }
 
 .instructions {
-  width: 12%;
+  width: 40%;
   padding: 10px;
-  position: fixed;
-  background: white;
-  z-index: 10;
+  margin: 0 auto;
+  text-align: center;
+  background: lightgrey;
+  position: relative;
 }
+
+.page-1 { margin-top: 100px; }
+.page-2 { margin-top: 100px; }
+.page-3 { margin-top: 100px; }
 
 body {
   color: grey;
   font-family: Helvetica;
-  font-size: 12px;
   font-weight: bold;
+  font-size: 13px;
 }
 
 a:link {
   color: grey;
-  text-decoration: none;
+  text-decoration: underline;
 }
 a:visited { color: grey; }
-a:hover { color: yellow; }
-a:active { color: grey; }
+a:hover { color: white; }
+a:active { color: white; }
 
-.outerwrapper {
-  padding: 100px 0 0 0;
+
+.pagewrapper {
+  width: 100%;
+  position: absolute;
+}
+
+.part-1 { margin: 10% 0; }
+.part-2 { margin: 75% 0; }
+.part-3 { margin: 140% 0; }
+
+.typefacewrapper {
   width: 100%;
   margin: 0 auto;
   text-align: center;
 }
+
+.small {height: 250px;}
+.large {height: 500px;}
+
+/*.wrapper-1 { margin: 25% 0 0 25%; }
+.wrapper-2 { margin-top: 125% 0 0 125%; }
+.wrapper-2 { margin-top: 225% 0 0 0; }*/
 
 .letterwrapper {
   width: 150px;
@@ -40,7 +61,6 @@ a:active { color: grey; }
   display: inline-block;
   margin: 20px;
 }
-
 
 .verticalline {
   width: 20px;
