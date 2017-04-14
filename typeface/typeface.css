@@ -2,6 +2,21 @@
     display: none; 
 } 
 
+body {
+  color: grey;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+a:link {
+  color: gold;
+  text-decoration: none;
+}
+a:visited { color: gold; }
+a:hover { transition: color 0.5s ease-in-out; color: white; }
+a:active { color: white; }
+
 .instructions {
   width: 30%;
   padding: 10px;
@@ -17,20 +32,27 @@
 
 .action {
   background: white;
-  border: 2px solid lightgrey;
+  border: 2px solid gold;
   margin-top: 10px;
   box-sizing: border-box;
   width: 32%;
 }
+
+.action:link {}
+.action:visited {}
+.action:hover { transition: background-color 0.5s ease-in-out; background-color: gold;}
+.action:active {}
+
 
 .instructionswrapper {
   width: 32%;
   margin: 0 auto;
   text-align: center;
 }
+
 .action2 {
   background: white;
-  border: 2px solid lightgrey;
+  border: 2px solid gold;
   padding: 10px;
   margin-top: 10px;
   box-sizing: border-box;
@@ -38,21 +60,10 @@
   display: inline-block;
 }
 
-
-body {
-  color: grey;
-  font-family: Helvetica;
-  font-weight: bold;
-  font-size: 13px;
-}
-
-a:link {
-  color: grey;
-  text-decoration: none;
-}
-a:visited { color: grey; }
-a:hover { color: lightblue; }
-a:active { color: lightblue; }
+.action2:link {}
+.action2:visited {}
+.action2:hover { transition: background-color 0.5s ease-in-out; background-color: gold;}
+.action2:active {}
 
 
 .pagewrapper {
