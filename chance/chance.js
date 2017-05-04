@@ -80,6 +80,12 @@ var nineLetterWords = ["different", "something", "important", "sometimes", "moun
 
 //MANDALA GENERATOR
 
+var mandalaCount = 0;
+
+function makeMandala() {
+	$("body").append('<div class="mandala mandala-' + mandalaCount + '"><div class="ring-4"></div><div class="ring-3"></div><div class="ring-2"></div><div class="ring-1"></div></div>');
+
+
 	var randomThree = Math.floor(Math.random()*threeLetterWords.length); 
 	var randomFive = Math.floor(Math.random()*fiveLetterWords.length);
 	var randomSeven = Math.floor(Math.random()*sevenLetterWords.length);
@@ -90,122 +96,151 @@ var nineLetterWords = ["different", "something", "important", "sometimes", "moun
 	var randomSevenValue = sevenLetterWords[randomSeven];
 	var randomNineValue = nineLetterWords[randomNine];
 	
-	var totalWords = Math.floor(Math.random()*18) + 3;
+	var totalWords = Math.floor(Math.random()*20) + 3;
 	var rotation = 0;
 	
 	for (var i = 0; i < totalWords; i++) {
-	  $(".ring-1").append('<div class="word word-1 black">' + randomThreeValue + '</div>');
+	  $(".mandala-" + mandalaCount + " .ring-1").append('<div class="word word-1 black">' + randomThreeValue + '</div>');
 	  console.log(randomThreeValue);
 	};
 	
-	$(".word-1").each(function() {
+	$(".mandala-" + mandalaCount + " .word-1").each(function() {
 	  $(this).css("transform", "translate(-50%,-50%) rotate(" + rotation + "deg)");
 	  rotation = rotation + 360/totalWords;
 	});
 	
-	totalWords = Math.floor(Math.random()*18) + 3;
+	totalWords = Math.floor(Math.random()*20) + 3;
 	rotation = 0;
 	
 	for (var i = 0; i < totalWords; i++) {
-	  $(".ring-2").append('<div class="word word-2 darkgrey">' + randomFiveValue + '</div>');
+	  $(".mandala-" + mandalaCount + " .ring-2").append('<div class="word word-2 darkgrey">' + randomFiveValue + '</div>');
 	  console.log(randomFiveValue);
 	};
 	
-	$(".word-2").each(function() {
+	$(".mandala-" + mandalaCount + " .word-2").each(function() {
 	  $(this).css("transform", "translate(-50%,-50%) rotate(" + rotation + "deg)");
 	  rotation = rotation + 360/totalWords;
 	});
 	
-	totalWords = Math.floor(Math.random()*18) + 3;
+	totalWords = Math.floor(Math.random()*20) + 3;
 	rotation = 0;
 	
 	for (var i = 0; i < totalWords; i++) {
-	  $(".ring-3").append('<div class="word word-3 grey">' + randomSevenValue + '</div>');
+	  $(".mandala-" + mandalaCount + " .ring-3").append('<div class="word word-3 grey">' + randomSevenValue + '</div>');
 	  console.log(randomSevenValue);
 	};
 	
-	$(".word-3").each(function() {
+	$(".mandala-" + mandalaCount + " .word-3").each(function() {
 	  $(this).css("transform", "translate(-50%,-50%) rotate(" + rotation + "deg)");
 	  rotation = rotation + 360/totalWords;
 	});
 	
-	totalWords = Math.floor(Math.random()*18) + 3;
+	totalWords = Math.floor(Math.random()*20) + 3;
 	rotation = 0;
 	
 	for (var i = 0; i < totalWords; i++) {
-	  $(".ring-4").append('<div class="word word-4 lightgrey">' + randomNineValue + '</div>');
+	  $(".mandala-" + mandalaCount + " .ring-4").append('<div class="word word-4 lightgrey">' + randomNineValue + '</div>');
 	  console.log(randomNineValue);
 	};
 	
-	$(".word-4").each(function() {
+	$(".mandala-" + mandalaCount + " .word-4").each(function() {
 	  $(this).css("transform", "translate(-50%,-50%) rotate(" + rotation + "deg)");
 	  rotation = rotation + 360/totalWords;
 	});
 
-
-
-
+};
 
 
 //NEW MANDALA ON CLICK
 
-//get coordinates of click location
-//create new mandala 
-//put e.ClientX and e.ClientY in for top and left values in css
-
-//$(window).click(function(e) {
-//	console.log(e.clientX);
-//	console.log(e.clientY);	
-//});
-
-
 $(window).click(function(e) {
-	$(".mandala").css("top", + e.clientY + "px");
-	$(".mandala").css("left", + e.clientX + "px");
+	makeMandala();
+
+	$(".mandala-" + mandalaCount).css("top", + e.clientY + "px");
+	$(".mandala-" + mandalaCount).css("left", + e.clientX + "px");
+	
+	$(".mandala-" + mandalaCount).hover(function() {
+		$(".poem").show();
+		$(".poem").html($(this).find(".word-1").first().html() + " " + $(this).find(".word-2").first().html() + " " + $(this).find(".word-3").first().html() + " " + $(this).find(".word-4").first().html());
+	}, function() {
+		$(".poem").hide();
+	});
+
+	mandalaCount++;
+
+	var myColors = ["navy", "mediumblue", "blue", "teal", "deepskyblue", "darkturquoise", "cyan",
+	            	"lightseagreen", "darkslategrey", "turquoise", "cornflowerblue", "steelblue", "cadetblue",
+	            	"royalblue", "slateblue", "skyblue", "lightblue", "lightsteelblue", "lightcyan", "lavender",
+	            	"lightpink", "peachpuff", "mistyrose", "linen", "lightsalmon", "lightcoral", "plum", "rosybrown",
+	            	"darkseagreen", "darkmagenta", "palevioletred", "blueviolet", "indigo", "darkslateblue",
+	           	   ];
+
+	$(window).scroll(function() {
+
+		var scrollVal = $(this).scrollTop();
+	
+		if (scrollVal > 1 && scrollVal < 2000) {
+			$('.mandala').each(function(index, element) {
+				var randomColorNum = Math.floor(Math.random()*myColors.length);
+				var randomColorVal = myColors[randomColorNum];
+				$(".mandala-" + index + " .ring-1 .black").css("color", randomColorVal);
+				$(".mandala-" + index + " .poem").css("color", randomColorVal);
+				var randomColorNum = Math.floor(Math.random()*myColors.length);
+				var randomColorVal = myColors[randomColorNum];
+				$(".mandala-" + index + " .darkgrey").css("color", randomColorVal);
+				var randomColorNum = Math.floor(Math.random()*myColors.length);
+				var randomColorVal = myColors[randomColorNum];
+				$(".mandala-" + index + " .grey").css("color", randomColorVal);
+				var randomColorNum = Math.floor(Math.random()*myColors.length);
+				var randomColorVal = myColors[randomColorNum];
+				$(".mandala-" + index + " .lightgrey").css("color", randomColorVal);
+			});
+			
+		} else { 
+			$(".mandala-" + (mandalaCount - 1) + " .black").css("color", "#000000");
+			$(".mandala-" + (mandalaCount - 1) + " .darkgrey").css("color", "#4d4d4d");
+			$(".mandala-" + (mandalaCount - 1) + " .grey").css("color", "999999");
+			$(".mandala-" + (mandalaCount - 1) + " .lightgrey").css("color", "#e6e6e6");
+			$(".mandala-" + (mandalaCount - 1) + " .poem").css("color", "white");
+		}
+	});
+
 });
-
- 
-$(".mandala").hover(function() {
-	$(".poem").html(randomThreeValue + " " + randomFiveValue + " " + randomSevenValue + " " + randomNineValue);
-});
-
-
-
-
-
 
 
 
 //COLOR CHANGING EFFECT
 
-var myColors = ["navy", "mediumblue", "blue", "teal", "deepskyblue", "darkturquoise", "cyan",
-	            "lightseagreen", "darkslategrey", "turquoise", "cornflowerblue", "steelblue", "cadetblue",
-	            "royalblue", "slateblue", "skyblue", "lightblue", "lightsteelblue", "lightcyan", "lavender",
-	            "lightpink", "peachpuff", "mistyrose", "linen", "lightsalmon", "lightcoral", "plum", "rosybrown",
-	            "darkseagreen", "darkmagenta", "palevioletred", "blueviolet", "indigo", "darkslateblue",
-	           ];
-
-$(window).scroll(function() {
-	console.log($(window).scrollTop());
-
-	var scrollVal = $(this).scrollTop();
-	if (scrollVal > 1 && scrollVal < 2000) {
-		var randomColorNum = Math.floor(Math.random()*myColors.length);
-		var randomColorVal = myColors[randomColorNum];
-		$(".black").css("color", randomColorVal);
-		var randomColorNum = Math.floor(Math.random()*myColors.length);
-		var randomColorVal = myColors[randomColorNum];
-		$(".darkgrey").css("color", randomColorVal);
-		var randomColorNum = Math.floor(Math.random()*myColors.length);
-		var randomColorVal = myColors[randomColorNum];
-		$(".grey").css("color", randomColorVal);
-		var randomColorNum = Math.floor(Math.random()*myColors.length);
-		var randomColorVal = myColors[randomColorNum];
-		$(".lightgrey").css("color", randomColorVal);
-	} else { 
-		$(".black").css("color", "#000000");
-		$(".darkgrey").css("color", "#4d4d4d");
-		$(".grey").css("color", "999999");
-		$(".lightgrey").css("color", "#e6e6e6");
-	}
-});
+//var myColors = ["navy", "mediumblue", "blue", "teal", "deepskyblue", "darkturquoise", "cyan",
+//	            "lightseagreen", "darkslategrey", "turquoise", "cornflowerblue", "steelblue", "cadetblue",
+//	            "royalblue", "slateblue", "skyblue", "lightblue", "lightsteelblue", "lightcyan", "lavender",
+//	            "lightpink", "peachpuff", "mistyrose", "linen", "lightsalmon", "lightcoral", "plum", "rosybrown",
+//	            "darkseagreen", "darkmagenta", "palevioletred", "blueviolet", "indigo", "darkslateblue",
+//	           ];
+//
+//$(window).scroll(function() {
+//
+//	var scrollVal = $(this).scrollTop();
+//
+//	if (scrollVal > 1 && scrollVal < 2000) {
+//		var randomColorNum = Math.floor(Math.random()*myColors.length);
+//		var randomColorVal = myColors[randomColorNum];
+//		$(".mandala-" + mandalaCount + ".black").css("color", randomColorVal);
+//		$(".mandala-" + mandalaCount + ".poem").css("color", randomColorVal);
+//		var randomColorNum = Math.floor(Math.random()*myColors.length);
+//		var randomColorVal = myColors[randomColorNum];
+//		$(".mandala-" + mandalaCount + ".darkgrey").css("color", randomColorVal);
+//		var randomColorNum = Math.floor(Math.random()*myColors.length);
+//		var randomColorVal = myColors[randomColorNum];
+//		$(".mandala-" + mandalaCount + ".grey").css("color", randomColorVal);
+//		var randomColorNum = Math.floor(Math.random()*myColors.length);
+//		var randomColorVal = myColors[randomColorNum];
+//		$(".mandala-" + mandalaCount + ".lightgrey").css("color", randomColorVal);
+//	} else { 
+//		$(".mandala-" + mandalaCount + ".black").css("color", "#000000");
+//		$(".mandala-" + mandalaCount + ".darkgrey").css("color", "#4d4d4d");
+//		$(".mandala-" + mandalaCount + ".grey").css("color", "999999");
+//		$(".mandala-" + mandalaCount + ".lightgrey").css("color", "#e6e6e6");
+//		$(".mandala-" + mandalaCount + ".poem").css("color", "white");
+//	}
+//});
