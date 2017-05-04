@@ -38,21 +38,24 @@ h2 {
 
 .pages {
 	width: 600px;
-	font-size: 40px;
-	display: inline-block;
-	height: 100px
+	margin: 0 auto;
+	text-align: center;
 }
 
 .lab-text {
 	height: 100px;
-	width: 300px;
-	text-align: left;
+	width: 250px;
+	font-size: 50px;
+	padding: 20px;
+	display: inline-block;
 }
 
 .studio-text {
 	height: 100px;
-	width: 300px;
-	text-align: right;
+	width: 250px;
+	font-size: 50px;
+	padding: 20px;
+	display: inline-block;
 }
 
 a:link {
