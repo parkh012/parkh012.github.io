@@ -74,8 +74,7 @@ var nineLetterWords = ["different", "something", "important", "sometimes", "moun
 				       ];
 
 
-
-
+$(".arrow").hide();
 
 
 //MANDALA GENERATOR
@@ -98,10 +97,15 @@ function makeMandala() {
 	
 	var totalWords = Math.floor(Math.random()*20) + 3;
 	var rotation = 0;
+
+	var wordSizes = ["10px", "20px", "30px", "40px", "50px"];
+	var randomSize = Math.floor(Math.random()*wordSizes.length);
+	var randomWordSize = wordSizes[randomSize];
 	
 	for (var i = 0; i < totalWords; i++) {
 	  $(".mandala-" + mandalaCount + " .ring-1").append('<div class="word word-1 black">' + randomThreeValue + '</div>');
 	  console.log(randomThreeValue);
+	  $(".mandala-" + mandalaCount + " .ring-1").append('<div class="word word-1 black">' + randomWordSize+ '</div>');
 	};
 	
 	$(".mandala-" + mandalaCount + " .word-1").each(function() {
@@ -146,7 +150,7 @@ function makeMandala() {
 	$(".mandala-" + mandalaCount + " .word-4").each(function() {
 	  $(this).css("transform", "translate(-50%,-50%) rotate(" + rotation + "deg)");
 	  rotation = rotation + 360/totalWords;
-	});
+	});	
 
 };
 
@@ -154,17 +158,35 @@ function makeMandala() {
 //NEW MANDALA ON CLICK
 
 $(window).click(function(e) {
+	if (!$(e.target).hasClass('word')) {
+
 	makeMandala();
 
 	$(".mandala-" + mandalaCount).css("top", + e.clientY + "px");
 	$(".mandala-" + mandalaCount).css("left", + e.clientX + "px");
+	$(".mandala-" + mandalaCount).data("showpoem", false);
 	
 	$(".mandala-" + mandalaCount).hover(function() {
-		$(".poem").show();
+		if ($(this).data("showpoem") == true) {
+			$(".poem").show();
+		}
 		$(".poem").html($(this).find(".word-1").first().html() + " " + $(this).find(".word-2").first().html() + " " + $(this).find(".word-3").first().html() + " " + $(this).find(".word-4").first().html());
 	}, function() {
 		$(".poem").hide();
+		$(this).data("showpoem", true);
 	});
+
+
+	$(".mandala-" + mandalaCount).click(function(e) {
+		$(this).hide();
+		$(".poem").hide();
+	});
+
+	function showArrow() {
+		$(".arrow").show();
+	}
+	setTimeout(showArrow, 500);
+
 
 	mandalaCount++;
 
@@ -184,7 +206,6 @@ $(window).click(function(e) {
 				var randomColorNum = Math.floor(Math.random()*myColors.length);
 				var randomColorVal = myColors[randomColorNum];
 				$(".mandala-" + index + " .ring-1 .black").css("color", randomColorVal);
-				$(".mandala-" + index + " .poem").css("color", randomColorVal);
 				var randomColorNum = Math.floor(Math.random()*myColors.length);
 				var randomColorVal = myColors[randomColorNum];
 				$(".mandala-" + index + " .darkgrey").css("color", randomColorVal);
@@ -197,50 +218,14 @@ $(window).click(function(e) {
 			});
 			
 		} else { 
-			$(".mandala-" + (mandalaCount - 1) + " .black").css("color", "#000000");
-			$(".mandala-" + (mandalaCount - 1) + " .darkgrey").css("color", "#4d4d4d");
-			$(".mandala-" + (mandalaCount - 1) + " .grey").css("color", "999999");
-			$(".mandala-" + (mandalaCount - 1) + " .lightgrey").css("color", "#e6e6e6");
-			$(".mandala-" + (mandalaCount - 1) + " .poem").css("color", "white");
+			$(".mandala .black").css("color", "#000000");
+			$(".mandala .darkgrey").css("color", "#4d4d4d");
+			$(".mandala .grey").css("color", "999999");
+			$(".mandala .lightgrey").css("color", "#e6e6e6");
 		}
 	});
 
+}
+
 });
 
-
-
-//COLOR CHANGING EFFECT
-
-//var myColors = ["navy", "mediumblue", "blue", "teal", "deepskyblue", "darkturquoise", "cyan",
-//	            "lightseagreen", "darkslategrey", "turquoise", "cornflowerblue", "steelblue", "cadetblue",
-//	            "royalblue", "slateblue", "skyblue", "lightblue", "lightsteelblue", "lightcyan", "lavender",
-//	            "lightpink", "peachpuff", "mistyrose", "linen", "lightsalmon", "lightcoral", "plum", "rosybrown",
-//	            "darkseagreen", "darkmagenta", "palevioletred", "blueviolet", "indigo", "darkslateblue",
-//	           ];
-//
-//$(window).scroll(function() {
-//
-//	var scrollVal = $(this).scrollTop();
-//
-//	if (scrollVal > 1 && scrollVal < 2000) {
-//		var randomColorNum = Math.floor(Math.random()*myColors.length);
-//		var randomColorVal = myColors[randomColorNum];
-//		$(".mandala-" + mandalaCount + ".black").css("color", randomColorVal);
-//		$(".mandala-" + mandalaCount + ".poem").css("color", randomColorVal);
-//		var randomColorNum = Math.floor(Math.random()*myColors.length);
-//		var randomColorVal = myColors[randomColorNum];
-//		$(".mandala-" + mandalaCount + ".darkgrey").css("color", randomColorVal);
-//		var randomColorNum = Math.floor(Math.random()*myColors.length);
-//		var randomColorVal = myColors[randomColorNum];
-//		$(".mandala-" + mandalaCount + ".grey").css("color", randomColorVal);
-//		var randomColorNum = Math.floor(Math.random()*myColors.length);
-//		var randomColorVal = myColors[randomColorNum];
-//		$(".mandala-" + mandalaCount + ".lightgrey").css("color", randomColorVal);
-//	} else { 
-//		$(".mandala-" + mandalaCount + ".black").css("color", "#000000");
-//		$(".mandala-" + mandalaCount + ".darkgrey").css("color", "#4d4d4d");
-//		$(".mandala-" + mandalaCount + ".grey").css("color", "999999");
-//		$(".mandala-" + mandalaCount + ".lightgrey").css("color", "#e6e6e6");
-//		$(".mandala-" + mandalaCount + ".poem").css("color", "white");
-//	}
-//});

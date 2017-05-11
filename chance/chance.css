@@ -1,3 +1,14 @@
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+
 body {
   height: 2394px;
 }
@@ -41,6 +52,7 @@ body {
 
 .poem {
   position: fixed;
+  display: none;
   bottom: 0px;
   left: 0px;
   width: 350px;
@@ -55,4 +67,11 @@ body {
   text-align: center;
   transition: 0.3s ease;
   z-index: 10;
+}
+
+.arrow {
+  position: fixed;
+  right: 10;
+  bottom: 10;
+  display: hidden;
 }
